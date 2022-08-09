@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stddef.h>
 /**
  * print_num - print a number regardless of type
  * @n: int
@@ -8,6 +8,8 @@
  */
 int *print_num(int n, int *i)
 {   
+    if (n == NULL)
+        return (0);
     if (n < 0)
     {
         _putchar('-');
