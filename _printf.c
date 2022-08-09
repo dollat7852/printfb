@@ -31,8 +31,8 @@ int _printf(const char * const format, ...)
 			else if (format[i + 1] == 's')
 			{
 				i++;
-				disp_count += _printf(va_arg(args, char *));
-				/* print_str(va_arg(args, char *), &disp_count); */
+				/* disp_count += _printf(va_arg(args, char *)); */
+				print_str(va_arg(args, char *), &disp_count);
 			}
 			else if (format[i + 1] == '%')
 			{
