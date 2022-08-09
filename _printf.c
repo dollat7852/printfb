@@ -14,9 +14,7 @@ int _printf(const char * const format, ...)
 	int i = 0;
 	int disp_count = 0;
 	int *ip = &disp_count;
-	char *str = NULL;
-	int num;
-	char ch;
+	
 	va_list args;
 
 	va_start(args, format);
@@ -32,17 +30,17 @@ int _printf(const char * const format, ...)
 			if (format[i + 1] == 'c')
 			{
 				i++;
-				ch = va_arg(args, int);
-				/*
-				*print_char(ch, ip);
-				*/
+				/*ch = va_arg(args, int);*/
+				
+				print_char(va_arg(args, int), ip);
+				
 			}
-			else if (format[i + 1] == 's')
+			/* else if (format[i + 1] == 's')
 			{
 				i++;
 				str = va_arg(args, char *);
 				disp_count += _printf(str);
-			}
+			} */
 			else if (format[i + 1] == '%')
 			{
 				_putchar('%');
@@ -51,8 +49,8 @@ int _printf(const char * const format, ...)
 			else if (format[i + 1] == 'i' || format[i + 1] == 'd')
 			{
 				i++;
-				num = va_arg(args, int);
-				print_num(num, ip);
+				/*num = va_arg(args, int);*/
+				print_num(va_arg(args, int), ip);
 			}
 		}
 		i++;
