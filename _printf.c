@@ -33,7 +33,9 @@ int _printf(const char * const format, ...)
 			{
 				i++;
 				ch = va_arg(args, int);
-				/*print_char(ch, ip);*/
+				/*
+				*print_char(ch, ip);
+				*/
 			}
 			else if (format[i + 1] == 's')
 			{
