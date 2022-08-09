@@ -33,13 +33,13 @@ int _printf(const char * const format, ...)
 			{
 				i++;
 				ch = va_arg(args, int);
-				print_char(ch, ip);
+				/*print_char(ch, ip);*/
 			}
 			else if (format[i + 1] == 's')
 			{
 				i++;
 				str = va_arg(args, char *);
-				/*disp_count += _printf(str);*/
+				disp_count += _printf(str);
 			}
 			else if (format[i + 1] == '%')
 			{
