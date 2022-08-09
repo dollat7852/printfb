@@ -8,8 +8,8 @@
  */
 int *print_num(int n, int *i)
 {   
-    if (n == NULL)
-        return (0);
+    /* if (n == NULL)
+        return (0); */
     if (n < 0)
     {
         _putchar('-');

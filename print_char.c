@@ -10,8 +10,8 @@
 
 int *print_char(char c, int *i)
 {
-	if (c == NULL)
-		return (0);
+	/* if (c == NULL)
+		return (0); */
 	_putchar(c);
 	(*i)++;
 	return (i);
