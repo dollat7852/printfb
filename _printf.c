@@ -30,17 +30,14 @@ int _printf(const char * const format, ...)
 			if (format[i + 1] == 'c')
 			{
 				i++;
-				/*ch = va_arg(args, int);*/
-				
 				print_char(va_arg(args, int), ip);
 				
 			}
-			/* else if (format[i + 1] == 's')
+			else if (format[i + 1] == 's')
 			{
 				i++;
-				str = va_arg(args, char *);
-				disp_count += _printf(str);
-			} */
+				disp_count += _printf(va_arg(args, char *));
+			}
 			else if (format[i + 1] == '%')
 			{
 				_putchar('%');
@@ -49,12 +46,11 @@ int _printf(const char * const format, ...)
 			else if (format[i + 1] == 'i' || format[i + 1] == 'd')
 			{
 				i++;
-				/*num = va_arg(args, int);*/
 				print_num(va_arg(args, int), ip);
 			}
 		}
 		i++;
 	}
 	va_end(args);
-	return (disp_count);
+	return (0);
 }
