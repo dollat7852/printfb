@@ -39,7 +39,7 @@ int _printf(const char * const format, ...)
 			{
 				i++;
 				str = va_arg(args, char *);
-				disp_count += _printf(str);
+				/*disp_count += _printf(str);*/
 			}
 			else if (format[i + 1] == '%')
 			{
