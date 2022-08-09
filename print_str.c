@@ -8,6 +8,7 @@ int *print_str(char *c, int *i)
         {
            _putchar(c[j]);
                 (*i)++;
+                j++;
         }
     return (i);
 }
